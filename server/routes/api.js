@@ -6,6 +6,25 @@ var request = require("request");
 var User = require('../models/user.js');
 var Book = require('../models/books.js');
 
+
+router.post('/approveRequest', function (req, res) {
+    Book.update( {bookid: req.body.bookid}, 
+    { requestedby: [{userid: req.body.userid, username: req.body.username}], authorized: true},
+    {new: true}, 
+    function (err,docs) {
+        if (err) {
+            return res.status(500).json({
+                err: err
+            });
+        }                   
+        return res.status(200).json({
+            status: 'Cancelled trade request',
+            docs: docs                
+        });
+    });
+});
+
+
 router.post('/cancelMyRequest', function (req, res) {
     Book.update( {bookid: req.body.bookid}, 
     { $pull: { requestedby: {userid: req.body.userid}}}, 
@@ -26,23 +45,6 @@ router.post('/denyRequest', function (req, res) {
     Book.update( {bookid: req.body.bookid}, 
     { $pull: { requestedby: {userid: req.body.userid}}}, 
 
-    function (err,docs) {
-        if (err) {
-            return res.status(500).json({
-                err: err
-            });
-        }                   
-        return res.status(200).json({
-            status: 'Cancelled trade request',
-            docs: docs                
-        });
-    });
-});
-
-router.post('/approveRequest', function (req, res) {
-    Book.update( {bookid: req.body.bookid}, 
-    { requestedby: [{userid: req.body.userid, username: req.body.username}], authorized: true},
-    {new: true}, 
     function (err,docs) {
         if (err) {
             return res.status(500).json({

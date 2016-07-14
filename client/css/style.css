@@ -1,16 +1,15 @@
 a:hover {
     text-decoration: none;
 }
+
+.col-md-2 {
+    height: 310px;
+}
 .alert {
     width: 50%;
 }
 
-.col-md-12 {
-    /*padding-left:0;
-    padding-right: 0;*/
-}
 .addBook {
-    /*background: #e7e7e7;*/
     border: 1px solid #dddddd;
 }
 .searchButton {
@@ -59,6 +58,7 @@ position: absolute;
 }
 .bookSearchTitle {
     clear: both;
+    font-size: 18px;
 }
 .jumbotron {
     background: #4a8b91!important;
@@ -79,7 +79,6 @@ position: absolute;
     font-size: 10px;
     font-style: italic;
     padding-top: 20px;
-    /* margin-top: 15px; */
     display: block;
 }
 .navbar {
