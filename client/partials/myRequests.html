@@ -1,0 +1,27 @@
+
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">My Trade Requests</h3>
+        </div>
+        <div class="panel-body">
+            <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+            <div ng-show="success" class="alert alert-success">{{successMessage}}</div>
+            <div class="myBooks col-md-2" ng-repeat="book in myRequests track by $index">
+                <form class="form" ng-submit="cancelMyRequest(book.bookid)">
+                    <div class="form-group">
+                        <div class="myBookUpper">
+                            <img ng-attr-src="{{book.bookImg}}" alt="{{book.bookTitle}}" class="myBookSearchImg">
+                        </div>
+                        <div class="bookSearchLower">  
+                            <p class="bookSearchTitle">{{book.bookTitle}}</p>
+                        </div>     
+                    </div>
+                    <button type="submit" class="btn btn-danger removeBook" ng-disabled="disabled">X</button>
+                </form>
+            </div>
+        </div>
+    </dvi>
+</div>
+
+

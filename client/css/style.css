@@ -1,0 +1,141 @@
+a:hover {
+    text-decoration: none;
+}
+.alert {
+    width: 50%;
+}
+
+.col-md-12 {
+    /*padding-left:0;
+    padding-right: 0;*/
+}
+.addBook {
+    /*background: #e7e7e7;*/
+    border: 1px solid #dddddd;
+}
+.searchButton {
+    display: inline-block;
+    width: 35%;
+}
+.bookSearchUpper {
+    height: 260px;
+    overflow: hidden;
+    padding-top:10px;
+}
+.bookSearchImg {
+    float: left;
+    padding-right: 15px;
+    height: 55%;
+}
+
+.panel {
+    margin-top: 20px;
+}
+
+.searchbox {
+    float:left;
+    margin-bottom: 30px;
+}
+.fa {
+    width: 10px;
+}
+.removeBook {
+position: absolute;
+    top: 0;
+    left: 107px;
+}
+.approveBook {
+position: absolute;
+    top: 0;
+    left: 72px;
+}
+.requestBook {
+position: absolute;
+    top: 0;
+    left: 108px;    
+}
+.authWidget {
+    padding-bottom: 35px;
+}
+.bookSearchTitle {
+    clear: both;
+}
+.jumbotron {
+    background: #4a8b91!important;
+    margin-bottom: 0;
+}
+
+.jumbotron h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #F5F5F5;
+    font-size: 105px;
+    text-align: left;
+}
+.requestP {
+    font-weight: bold;
+    font-size: 11px;
+}
+.username {
+    font-size: 10px;
+    font-style: italic;
+    padding-top: 20px;
+    /* margin-top: 15px; */
+    display: block;
+}
+.navbar {
+    margin-bottom: 0;
+}
+
+.fa-cog-size {
+    font-size: 20px;
+    padding-right: 5px;
+}
+.btnrequest {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    padding: 5px 5px;
+}
+.btnChosen {
+    background-color: #5cb85c;
+    background-image: none;
+}
+.logoheight {
+    height: 50px;
+    float: left;
+}
+.logo{
+    margin-top: 0;
+    padding-top: 0;
+}
+.logoText {
+        float: left;
+    padding-left: 10px;
+    margin-top: 11px;
+}
+.tagline {
+    font-size: 20px;
+    font-style: bold;
+    color: #fff;
+    text-align: left;
+}
+.panelheadings {
+    color: #4a8b91;
+}
+.btn-myrequest {
+    background: #c9d66a;
+    color: #000;
+}
+.btn-traderequest {
+    background: #4a8b91;
+    color: #fff;
+}
+.btn-approved {
+    background: #bbab9e;
+    color: #000;
+}
+.btn-lookup {
+    background: #fcc300;
+    color: #000;
+    width: 100px;
+}

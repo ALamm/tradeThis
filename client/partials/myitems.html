@@ -1,0 +1,61 @@
+
+
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Add books that you own</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form" ng-submit="search()">
+                <div class="form-group searchButton">
+                    <label>Add a book</label>
+                    <input type="text" class="form-control" name="search" ng-model="searchForm.search" required>
+                </div>
+                <button type="submit" class="btn btn-lookup searchButton" ng-disabled="disabled">Lookup</button>
+            </form>
+            <div class="searchbox" ng-show="dbResults">
+                <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+                <div class="addBook col-md-3" ng-repeat="book in bookSearch track by $index">
+                    <form class="form" ng-submit="addBook(book.id, book.volumeInfo.imageLinks.thumbnail, book.volumeInfo.title)">
+                        <div class="form-group">
+                            <div class="bookSearchUpper">
+                                <h3 class="bookSearchTitle">{{book.volumeInfo.title}}</h3>
+                                <img ng-attr-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="" class="bookSearchImg">
+                                <p class="description">{{book.volumeInfo.description}}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary" ng-disabled="disabled">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Books you want to lend</h3>
+        </div>
+        <div class="panel-body">
+            <div class="myBooks col-md-2" ng-repeat="myBook in myBooks track by $index">
+                <form class="form" ng-submit="removeBook(myBook.bookid)">
+                    <div class="form-group">
+                        <div class="myBookUpper">
+                            <img ng-attr-src="{{myBook.bookImg}}" alt="{{myBook.bookTitle}}" class="myBookSearchImg">
+                        </div>
+                        <div class="bookSearchLower">  
+                            <h3 class="bookSearchTitle">{{myBook.bookTitle}}</h3>
+                        </div>     
+                    </div>
+                    <button type="submit" class="btn btn-danger removeBook" ng-disabled="disabled">X</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

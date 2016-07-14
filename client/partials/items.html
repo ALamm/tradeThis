@@ -1,0 +1,27 @@
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Choose from a complete list of books available to borrow.</h3>
+        </div>
+        <div class="panel-body">
+            
+            <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+            <div ng-show="success" class="alert alert-success">{{successMessage}}</div>
+
+            <div class="myBooks col-md-2" ng-repeat="book in allBooks track by $index">
+                <form class="form" ng-submit="requestBook(book.bookid)">
+                    <div class="form-group">
+                        <div class="myBookUpper">
+                            <img ng-attr-src="{{book.bookImg}}" alt="{{book.bookTitle}}" class="">
+                        </div>
+                        <div class="bookSearchLower">  
+                            <p class="bookSearchTitle">{{book.bookTitle}}</p>
+                        </div>     
+                    </div>
+                    <button type="submit" class="btn btn-primary requestBook" ng-class="{btnChosen: btnRequest == book.bookid}" ng-disabled="disabled" data-tip="Click to request a trade"><i class="fa fa-check-circle"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
