@@ -1,5 +1,8 @@
 # Book Share Club
-App that tracks users books, and requested trades
+App that tracks users books, requested trades, and dashboard to manage requests and settings
+
+# Demo Site
+https://tradethis.herokuapp.com/#/login
 
 # User Stories
 1. I can view all books posted by every user.
@@ -10,4 +13,11 @@ App that tracks users books, and requested trades
 6. I can view my requests
 7. I can view who has requested my book - and approve/dissaprove the request
 
+# Tech Stack
+M - Mongo
+E - Express
+A - Angular 
+N - Node
+
+Passport-local  for authentication
 
