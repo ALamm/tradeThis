@@ -14,9 +14,9 @@ https://tradethis.herokuapp.com/#/login
 7. I can view who has requested my book - and approve/dissaprove the request
 
 # Tech Stack
-M - Mongo.
-E - Express.
-A - Angular.
+M - Mongo  
+E - Express  
+A - Angular  
 N - Node
 
 Passport-local  for authentication
