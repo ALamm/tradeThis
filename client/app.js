@@ -2,12 +2,6 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngCookies']);
 
 myApp.config(function($routeProvider) {
     $routeProvider
-        // .when('', {
-        //     template: '',
-        //     access: {
-        //         restricted: false
-        //     }
-        // })
         .when('/', {
             templateUrl: 'partials/home.html',
             access: {
