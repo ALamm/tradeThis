@@ -138,3 +138,6 @@ position: absolute;
     color: #000;
     width: 100px;
 }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
